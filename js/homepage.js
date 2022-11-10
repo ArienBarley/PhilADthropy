@@ -10,26 +10,35 @@ Authors: Arien Barley,
 //function to turn the select a charity button to a link to that charity's page
 
 //button management
-
-var startWatchingButton =$("#start_wathching")
-
-<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>$("#charity1_button").click(function() {
-  $("#about_charity_div").html("<p> Info on that charity" + "</p>");
-  $("#choose_charity_button").html(startWatchingButton);
+$("#charity1_button").click(function() {
+  $("#about_charity_div").html("<p> Info on that charity1" + "</p>");
+  $("#choose_charity_button").css({color: 'red'});
+  $("#choose_charity_button").html("Start Watching");
+  $("#choose_charity_button").prop('disabled', false)
 });
 
-
 $("#charity2_button").click(function() {
-  $("#about_charity_div").append("<p> Info on that charity" + "</p>");
-  $("#choose_charity_button").innerHTML = startWatchingButton;
+  $("#about_charity_div").html("<p> Info on that charity2" + "</p>");
+  $("#choose_charity_button").css({color: 'red'});
+  $("#choose_charity_button").html("Start Watching");
+  $("#choose_charity_button").prop('disabled', false)
 });
 
 $("#charity3_button").click(function() {
-  $("#about_charity_div").append("<p> Info on that charity" + "</p>");
-  $("#choose_charity_button").innerHTML = startWatchingButton;
+  $("#about_charity_div").html("<p> Info on that charity3" + "</p>");
+  $("#choose_charity_button").css({color: 'red'});
+  $("#choose_charity_button").html("Start Watching");
+  $("#choose_charity_button").prop('disabled', false)
+
 });
 
 $("#charity4_button").click(function() {
-  $("#about_charity_div").append("<p> Info on that charity" " + "</p>");
-  $("#choose_charity_button").innerHTML = startWatchingButton;
+  $("#about_charity_div").html("<p> Info on that charity4" + "</p>");
+  $("#choose_charity_button").css({color: 'red'});
+  $("#choose_charity_button").html("Start Watching");
+  $("#choose_charity_button").prop('disabled', false)
+});
+
+$("#choose_charity_button").click(function() {
+
 });
