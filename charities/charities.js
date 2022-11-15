@@ -30,17 +30,20 @@ function incrementWatches(){
 
     //update session count on page
     sessionWatches++;
+    console.log(sessionWatches);
     $('#session-count').html(sessionWatches);
 
     //loads up a new add (possibly refreshes the i-frame)
 };
+
 function loadDoc() {
-  const xhttp = new XMLHttpRequest();
-  xhttp.onload = function() {
-    document.getElementById("testwrite").innerHTML = this.responseText;
+    console.log('loadDoc runs');
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+        document.getElementById("testwrite").innerHTML = this.responseText;
     }
-  xhttp.open("GET", "data.txt", true);
-  xhttp.send();
+    xhttp.open("GET", "data.txt", true);
+    xhttp.send();
 }
 
 
