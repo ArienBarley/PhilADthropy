@@ -20,14 +20,9 @@
 #ad-watch-wrapper{
     margin: auto;
     text-align: center;
-    padding-left: 50px;
-    padding-bottom: 50px;
-    padding-right: 50px;
-    padding-top: 50px;
-    background-color: #FEAB61;
+    background-color: #FEAB71;
     height: 100%;
     width: 60%;
-    border-radius: 20px;
 }
 
 .video-frame{
