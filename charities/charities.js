@@ -16,25 +16,22 @@ let sessionWatches = 0;
 
 //ad an add function
 
-//watch counter
-
 //increment watch count
 
 //when an add has been watched an event listener triggers this function
 function incrementWatches(){
     // funciton which is triggered each time the user completes an ad watch or add click
-    console.log('function runs');
+
     //updates frame of progress bar
 
     //+1 to add count for this charity in the file
-
     //update session count on page
     sessionWatches++;
-    console.log(sessionWatches);
     $('#session-count').html(sessionWatches);
 
     //loads up a new add (possibly refreshes the i-frame)
 };
+function updateProgressBar()
 
 function loadDoc() {
     console.log('loadDoc runs');
@@ -47,16 +44,6 @@ function loadDoc() {
 };
 
 
-
-function playvideo(){
-    f = $('#vid1');
-    console.log('clickin iframe content?');
-    console.log(f.contents());
-
-}
-function testTheData(){
-
-}
 //end functions
 //button management
 $('#session-count').html(sessionWatches);
@@ -64,10 +51,20 @@ $('#next-ad').click(incrementWatches);
 $('#test').click(loadDoc);
 $('#test-play-video').click(playvideo);
 
+
 //gif management
 
 
 /*dump
+
+
+function playvideo(){
+    f = $('#vid1');
+    console.log('clickin iframe content?');
+    console.log(f.contents());
+}
+
+
 function getIframeContent(iframeEl){
     console.log(iframeEl);
     contents = iframeEl.contentWindow ?

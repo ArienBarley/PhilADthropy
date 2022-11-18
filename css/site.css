@@ -102,3 +102,12 @@ th, td {
   width:250px;
   height: 150px;
 }
+
+
+
+/*to be moved to charities .css*/
+#progress-bar img{
+    width: 10%;
+    height: 300px;
+    float: right;
+}
