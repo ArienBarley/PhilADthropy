@@ -19,7 +19,7 @@ var charityInfos = ['about charity 1: blah blah blah blah blah blah blah blah ',
 
 //links to each charities page
 var links = ['charities/index.html','charities/index.html',
-             'charities/index.html','charities/index.html',]
+             'charities/index.html','charities/index.html',];
 
 //funcitons
 function charitySelected(charityNo){
