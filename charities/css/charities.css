@@ -1,5 +1,5 @@
 @import "../../css/site.css";
-* {font-family: Courier, monospace;}
+
 
 #page{
     justify-content: center
@@ -10,11 +10,11 @@
 }
 
 #header{
+  height: 100px;
 }
 
 #button-area{
   text-align: center;
-  background-color: #F6EDEE;
 }
 
 #ad-watch-wrapper{
