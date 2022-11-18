@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+#icon {
+  background-color: #F0F1F5;
+  padding: 10px;
+}
+
+body{
+  background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ed3dcaf3-1a12-49e8-9651-41e95f1dd71d/dfhfafg-979990eb-8b53-4a08-bead-ff1056db9b42.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2VkM2RjYWYzLTFhMTItNDllOC05NjUxLTQxZTk1ZjFkZDcxZFwvZGZoZmFmZy05Nzk5OTBlYi04YjUzLTRhMDgtYmVhZC1mZjEwNTZkYjliNDIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.aDo0G5K3SNlrKQIv_2iPzTNRP9thPasvPrREJP095VE);
+}
+
+h1.meet{
+text-decoration: none;
+  margin-right: -100px;
+padding: 40px;
+}
+#contents {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin-top: -180px;
+}
+
+hr{
+  border: 5px solid #204489;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+
+h1{
+  font-size: 60px;
+  text-align: center;
+  padding: -100px;
+  text-decoration: underline;
+  color: #204489;
+  margin-top: -20px;
+
+}
+
+p{
+  align-content: center;
+  text-align: center;
+  margin-top: 10px;
+}
+
+p.blurb {
+  margin-top: -200px;
+}
+
+.slide-container{
+  max-width: 1120px;
+  width: 100%;
+  background-color: #F0F1F5 0;
+  padding: 40px 0;
+
+}
+}
+.slide-content {
+  margin: 0 40px;
+}
+
+
+.card {
+  width: 320px;
+  border-radius: 25px;
+  background-color: white;
+}
+
+.image-content,
+.card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 85px 14px;
+}
+
+.image-content{
+  position: relative;
+  row-gap: 5px;
+  border-radius: 25px 25px 0 25px;
+  padding: 25px 0;
+}
+
+.overlay{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #204489;
+  border-radius: 25px 25px 0 25px;
+}
+
+.overlay::before,
+.overlay::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: #204489;
+}
+
+.overlay::after{
+  border-radius: 0 25px 0 0;
+  background-color: white;
+}
+
+
+.card-image {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: white;
+  padding: 3px;
+  transition: all 0.3s ease;
+
+}
+.card-image:hover {
+  background-color: #FFC543;
+  border-radius: 70%;
+  margin: 2px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.card-image .card-img {
+  height: 100%;
+  width: 100% object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid black;
+}
+
+.name{
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+}
+
+.description{
+  font-size: 14px;
+  color: black;
+  text-align: center;
+}
+
+.button{
+  border:none;
+  font-size: 16px;
+  color: white;
+  padding: 8px 16px;
+  background-color: #FFC543;
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.button:hover{
+  background: #204489;
+}
+
+
+.FND{
+  border:none;
+  font-size: 16px;
+  color: white;
+  padding: 8px 16px;
+    background-image: url(https://fightthenewdrug.org/wp-content/uploads/2020/10/FTND_NPN2020_FighterPledge_1x1.gif);
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.FND:hover{
+  background: #204489;
+}
+
+p.style{
+  background-color: none;
+}
+.BFAS{
+  border:none;
+  font-size: 16px;
+  color: white;
+  padding: 8px 16px;
+  background-image: url(https://bestfriends.org/sites/default/files/basic_images/savethemall-bestfriendsanimalsociety_0.jpg);
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.BFAS:hover{
+  background: #204489;
+}
+
+.MHA{
+  border:none;
+  font-size: 16px;
+  color: white;
+  padding: 8px 16px;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVKliC0jqY8SDme9s8OIowk7mnAB0Zm6fdYA&usqp=CAU);
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.MHA:hover{
+  background: #204489;
+}
+
+.NPR{
+  border:none;
+  font-size: 16px;
+  color: white;
+  padding: 8px 16px;
+  background-image: url(https://npf-prod.imgix.net/uploads/92e52a0b205e43b28f0fad900144da2e.jpg?auto=compress%2Cformat&crop=focalpoint&fit=min&fp-x=0.5&fp-y=0.5&h=1004&q=80&w=1600);
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.NPR:hover{
+  background: #204489;
+}
+
+#button-slug{
+  text-align: right;
+  padding: 30px;
+  margin-bottom: 200px;
+}
+
+hr{
+  border-color: none;
+}
+
+
+/*  Rollover image styles  */
+ .figure {
+   position: relative;
+   width: 280px; /* can be omitted for a regular non-lazy image */
+   max-width: 100%;
+   padding: 20px;
+      margin-bottom: -10px;
+ }
+ .figure img.image-hover {
+   position: absolute;
+   top: 0;
+   right: 0;
+   left: 0;
+   bottom: 0;
+   object-fit: contain;
+   opacity: 0;
+   padding: 20px;
+   margin-bottom: -10px;
+   transition: opacity .2s;
+ }
+
+ .figure:hover img.image-hover {
+   opacity: 1;
+ }
+
+#slider {
+  margin-top: -20px;
+  margin-bottom: -200px;
+}
+
+#icon {
+  padding: 20px;
+}
+ img.image-main {
+   text-align: right;
+ }
+
+ #words {
+   margin-bottom: -250px;
+ }
