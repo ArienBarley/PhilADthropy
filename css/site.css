@@ -1,38 +1,65 @@
-
-
-
 /*to format the header*/
 #header {
-    width: 100%;
-    height: 30px;
+  width: 100%;
+  height: 30px;
 }
 
 #home-link-img {
-    height: 100%;
-    float: left;
+  height: 100%;
+  float: left;
 }
 
 #about-us-link {
-    float: right;
-    font-family: sans-serif;
+  float: right;
+  font-family: sans-serif;
 }
 
-#right_buttons{
+#right_buttons {
   display: flex;
-	flex-direction: row;
-	justify-content: left;
+  flex-direction: row;
+  justify-content: left;
   /*align-items: stretch;*/
 }
-#left_buttons{
+
+#left_buttons {
   display: flex;
-	flex-direction: row;
-	justify-content: right;
+  flex-direction: row;
+  justify-content: right;
   /*align-items: stretch;*/
 }
-#center_button{
+
+#center_button {
   display: flex;
   /*text-align: center;*/
-	flex-direction: row;
-	justify-content: center;
+  flex-direction: row;
+  justify-content: center;
   /*align-items: stretch;*/
 }
+
+
+#about_charity_div {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  /*align-items: stretch;*/
+}
+
+#table {
+  /*
+  justify-content: center;
+  margin: auto;
+  display: flex;
+  height: 700px;
+  align-items: center;
+  */
+  border: 5px solid;
+  position: absolute;
+  top: 50%;
+  transform: translate(200%, -50%);
+  padding: 10px;
+}
+
+/*td{width: 33%};
+tr{width: 100%};*/
