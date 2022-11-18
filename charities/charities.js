@@ -44,16 +44,55 @@ function loadDoc() {
     }
     xhttp.open("GET", "data.txt", true);
     xhttp.send();
+};
+
+
+
+function playvideo(){
+    f = $('#vid1');
+    console.log('clickin iframe content?');
+    console.log(f.contents());
+
 }
-
-
 function testTheData(){
-
 
 }
 //end functions
-
 //button management
 $('#session-count').html(sessionWatches);
 $('#next-ad').click(incrementWatches);
 $('#test').click(loadDoc);
+$('#test-play-video').click(playvideo);
+
+//gif management
+
+
+/*dump
+function getIframeContent(iframeEl){
+    console.log(iframeEl);
+    contents = iframeEl.contentWindow ?
+            //if true
+            iframeEl.contentWindow.document
+            //if false
+            : iframeEl.contentDocument;
+    console.log(contents);
+    return contents;
+};
+
+
+
+
+if ($('#vid1').contentWindow){
+    console.log('contentWindow exists');
+    $('#vid1').contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+}else if ($('#vid1').contentDocument){
+    console.log('contentDocument exists');
+    $('#vid1').contentDocument.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+}else{
+    console.log('neither exists')
+}
+
+
+console.log(document.getElementById("vid1").contentWindow)
+document.getElementById("vid1").contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+*/
