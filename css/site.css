@@ -70,17 +70,28 @@ th, td {
 
 #charity1_button{
   background-image:url("https://cdn.discordapp.com/attachments/521606218930847786/1043275904379523112/IMG_0304.png");
-
+  background-size: cover;
+  width: 250px;
+  height: 150px;
 }
 
 #charity2_button{
   background-image:url("https://media.discordapp.net/attachments/521606218930847786/1043275904136261662/IMG_0305.png?width=886&height=498");
+  background-size: cover;
+  width:250px;
+  height: 150px;
 }
 
 #charity3_button{
   background-image:url("https://media.discordapp.net/attachments/521606218930847786/1043275903897182218/IMG_0306.png?width=886&height=498");
+  background-size: cover;
+  width:250px;
+  height: 150px;
 }
 
 #charity4_button{
   background-image:url("https://media.discordapp.net/attachments/521606218930847786/1043275903670693928/IMG_0307.png?width=886&height=498");
+  background-size: cover;
+  width:250px;
+  height: 150px;
 }
