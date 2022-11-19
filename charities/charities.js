@@ -16,8 +16,6 @@ const numberOfProgressBarFrames = 5;
 
 //functions
 
-//ad an add function
-
 //increment watch count
 
 //when an add has been watched an event listener triggers this function
@@ -51,7 +49,7 @@ function loadProgressBarFrames(){
         console.log(frame);
         console.log(i);
         //add it to the list
-        progressBarFrames.pushx(frame);
+        progressBarFrames.push(frame);
     }
 }
 
@@ -69,21 +67,27 @@ function loadDoc() {
 
 
 //end functions
+
+window.onload = (event) => {
+    loadProgressBarFrames();
+};
+
 //button management
 $('#session-count').html(sessionWatches);
 $('#next-ad').click(incrementWatches);
 $('#test').click(loadDoc);
 //$('#test-play-video').click(playvideo);
 
-window.onload = (event) => {
-    loadProgressBarFrames();
-};
+
 
 //gif management
 
 
 /*dump
 
+rHTML
+
+<button id = 'test-play-video'>testplayvid</button>
 
 function playvideo(){
     f = $('#vid1');
