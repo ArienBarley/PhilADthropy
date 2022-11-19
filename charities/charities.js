@@ -9,7 +9,9 @@ Authors: Arien Barley,
 //no of ads the user has watched this session
 let sessionWatches = 0;
 
+let progressBarFrames = []
 
+const numberOfProgressBarFrames = 5;
 //end variabe creation
 
 //functions
@@ -22,15 +24,37 @@ let sessionWatches = 0;
 function incrementWatches(){
     // funciton which is triggered each time the user completes an ad watch or add click
 
-    //updates frame of progress bar
-
     //+1 to add count for this charity in the file
     //update session count on page
     sessionWatches++;
     $('#session-count').html(sessionWatches);
 
+    //updates frame of progress bar
+
+
+    if (sessionWatches < numberOfProgressBarFrames){
+        //delete last frame
+        $('#progress-bar img').remove();
+        //epend next frame
+        $('#progress-bar').append(progressBarFrames[sessionWatches]);
+    }//otherwise leave the last frame in place
+
     //loads up a new add (possibly refreshes the i-frame)
 };
+//load progress par frames
+function loadProgressBarFrames(){
+    console.log('runing')
+    for (var i = 0; i<numberOfProgressBarFrames -1 ;i++){
+        //create element ghost
+        frame = document.createElement('img');
+        frame.src = '../img/progressbarframes/frame'+i+'.jpg';
+        console.log(frame);
+        console.log(i);
+        //add it to the list
+        progressBarFrames.pushx(frame);
+    }
+}
+
 //function updateProgressBar()
 
 function loadDoc() {
@@ -51,6 +75,9 @@ $('#next-ad').click(incrementWatches);
 $('#test').click(loadDoc);
 //$('#test-play-video').click(playvideo);
 
+window.onload = (event) => {
+    loadProgressBarFrames();
+};
 
 //gif management
 

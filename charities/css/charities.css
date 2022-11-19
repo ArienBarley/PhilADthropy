@@ -47,3 +47,13 @@
     border-style: none;
     text-align: center;
 }
+
+#progress-bar img{
+    width: 10%;
+    height: 300px;
+    float: right;
+    position: fixed;
+    right: 5%;
+    top: 25%;
+    width: 10%;
+}
