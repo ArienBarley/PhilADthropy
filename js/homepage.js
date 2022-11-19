@@ -25,7 +25,9 @@ var links = ['charities/index.html','charities/index.html',
 function charitySelected(charityNo){
     watchButton = $('#choose_charity_button')
     $("#about_charity_div").html('<h2>'+charityNames[charityNo]+"</h2> <p>"+charityInfos[charityNo]+"</p>");
-    watchButton.css({color: 'red'});
+    $("#about_charity_div").css('border', '2mm ridge rgba(255, 255, 255, .6)');
+    watchButton.css({color: 'red', 'font-weight': 'bold'});
+    //watchButton.css({'font-weight', 'bold'});
     watchButton.html("Start Watching");
     watchButton.prop('disabled', false);
     //update choose charity link
