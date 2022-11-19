@@ -23,6 +23,7 @@
     background-color: #FEAB71;
     height: 100%;
     width: 60%;
+    display:inline-block;
 }
 
 .video-frame{
