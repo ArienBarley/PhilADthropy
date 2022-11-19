@@ -31,7 +31,7 @@ function incrementWatches(){
 
     //loads up a new add (possibly refreshes the i-frame)
 };
-function updateProgressBar()
+//function updateProgressBar()
 
 function loadDoc() {
     console.log('loadDoc runs');
@@ -49,7 +49,7 @@ function loadDoc() {
 $('#session-count').html(sessionWatches);
 $('#next-ad').click(incrementWatches);
 $('#test').click(loadDoc);
-$('#test-play-video').click(playvideo);
+//$('#test-play-video').click(playvideo);
 
 
 //gif management
