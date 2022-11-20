@@ -7,37 +7,43 @@
 	<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
 	<script type="text/javascript" src="charities.js" defer=""></script>
+	<script type="text/javascript" src="temp.js" defer=""></script>
 </head>
 <body>
 	<div id = 'header'>
 		<a href = '../index.html'>
 			<img id = 'home-link-img' src = '../img/homebuttonplaceholder.png' >
 		</a>
-		<p id = about-us-link><a href = '../aboutUs/index.html'>About Us</a></p>
+		<p id = about-us-link><a href = '../About US/index.html'>About Us</a></p>
 	</div>
+
 	<div id = 'page'>
-		<p>You are watching ads for charity!</p>
-		<div id = 'ad-watch-wrapper'>
-			<div class = 'video-frame'>
-				<p id = 'aligner'><iframe id = 'vid1' src = 'https://www.youtube.com/embed/HQxwMfqeurQ' title = 'watching video 1'></iframe></p>
+		<h2>You are watching ads for charity!</h2>
+		<div id = 'progress-bar-and-watcher'>
+			<div id = 'ad-watch-wrapper'>
+				<div class = 'video-frame' id = 'frame1'>
+					<p id = 'aligner'><iframe id = 'vid1' src = 'https://www.youtube.com/embed/HQxwMfqeurQ' title = 'watching video 1'></iframe></p>
+				</div>
 			</div>
-		</div>
-		<div id = 'progress-bar'>
-			<img data-gifffer = '../img/bright-red.gif'>
+
+			<div id = 'progress-bar'>
+				<img src = '../img/progressbarframes/frame1.jpg' >
+			</div>
 		</div>
 		<div id = 'ad-watch-counter'>
-			<p>session count:</p>
+			<p>Session count:</p>
 			<div id= "session-count">
-
 			</div>
-
 		</div>
-		<button id = 'test-play-video'>testplayvid</button>
-		<button id = 'ad-an-add'>Add an<br> add</button>
-		<button id = 'next-ad'>next ad</button>
-		<button id = test>test</button>
-		<div id= "testwrite">
-			Data read from github will appear here
+
+		<div id= 'button-area'>
+
+			<button id = 'ad-an-add'>Add an<br> add</button>
+			<button id = 'next-ad'>next ad</button>
+			<button id = test>See how much other <br>people have watched</button>
+			<div id= "testwrite">
+				<p></p>
+			</div>
 		</div>
 	</div>
 </body>

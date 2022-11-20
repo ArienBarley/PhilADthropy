@@ -9,32 +9,51 @@ Authors: Arien Barley,
 //no of ads the user has watched this session
 let sessionWatches = 0;
 
+let progressBarFrames = []
 
+const numberOfProgressBarFrames = 5;
 //end variabe creation
 
 //functions
-
-//ad an add function
-
-//watch counter
 
 //increment watch count
 
 //when an add has been watched an event listener triggers this function
 function incrementWatches(){
     // funciton which is triggered each time the user completes an ad watch or add click
-    console.log('function runs');
-    //updates frame of progress bar
 
     //+1 to add count for this charity in the file
-
     //update session count on page
     sessionWatches++;
-    console.log(sessionWatches);
     $('#session-count').html(sessionWatches);
+
+    //updates frame of progress bar
+
+
+    if (sessionWatches < numberOfProgressBarFrames){
+        //delete last frame
+        $('#progress-bar img').remove();
+        //epend next frame
+        $('#progress-bar').append(progressBarFrames[sessionWatches]);
+    }//otherwise leave the last frame in place
 
     //loads up a new add (possibly refreshes the i-frame)
 };
+//load progress par frames
+function loadProgressBarFrames(){
+    console.log('runing')
+    for (var i = 0; i<numberOfProgressBarFrames -1 ;i++){
+        //create element ghost
+        frame = document.createElement('img');
+        frame.src = '../img/progressbarframes/frame'+i+'.jpg';
+        console.log(frame);
+        console.log(i);
+        //add it to the list
+        progressBarFrames.push(frame);
+    }
+}
+
+//function updateProgressBar()
 
 function loadDoc() {
     console.log('loadDoc runs');
@@ -47,27 +66,36 @@ function loadDoc() {
 };
 
 
-
-function playvideo(){
-    f = $('#vid1');
-    console.log('clickin iframe content?');
-    console.log(f.contents());
-
-}
-function testTheData(){
-
-}
 //end functions
+
+window.onload = (event) => {
+    loadProgressBarFrames();
+};
+
 //button management
 $('#session-count').html(sessionWatches);
 $('#next-ad').click(incrementWatches);
 $('#test').click(loadDoc);
-$('#test-play-video').click(playvideo);
+//$('#test-play-video').click(playvideo);
+
+
 
 //gif management
 
 
 /*dump
+
+rHTML
+
+<button id = 'test-play-video'>testplayvid</button>
+
+function playvideo(){
+    f = $('#vid1');
+    console.log('clickin iframe content?');
+    console.log(f.contents());
+}
+
+
 function getIframeContent(iframeEl){
     console.log(iframeEl);
     contents = iframeEl.contentWindow ?

@@ -5,6 +5,8 @@
   font-family: 'Poppins', sans-serif;
 }
 
+* {font-family: Courier, monospace;}
+
 #icon {
   background-color: #F0F1F5;
   padding: 10px;

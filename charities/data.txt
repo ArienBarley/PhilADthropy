@@ -1,5 +1,2 @@
-Data
-Charity1, 1
-Charity2, 2 
-Charity3, 3 
-Charity4
+IF we can get reading and writing data working, data about the number of watches for each charity will appear here
+This data was loaded from a seperate file on the github repositiory.
