@@ -10,12 +10,12 @@ Authors: Arien Barley,
 //function to turn the select a charity button to a link to that charity's page
 
 //variable definitions
-var charityNames = ['Charity 1','Charity 2','Charity 3','Charity 4',];
+var charityNames = ['National Parks Conservation Association','Fight the New Drug','Best Friends Animal Society','Mental Health America',];
 
-var charityInfos = ['about charity 1: blah blah blah blah blah blah blah blah ',
-                    'about charity 2: blah blah blah blah blah blah blah blah ',
-                    'about charity 3: blah blah blah blah blah blah blah blah ',
-                    'about charity 4: blah blah blah blah blah blah blah blah ',];
+var charityInfos = ['The National Park Conservation Association mission is to protect and preserve the national parks for the present and future generations. They inform and inspire the public and influence decision-makers to ensure that the favorite places of America are being protected. ',
+                    'Fight the New Drug is a non-religious, non-legislative, nonprofit organization that informs decisions regarding pornography by raising awareness of its harmful effects using only science, facts, and personal accounts. ',
+                    'The Best Friends goal is to achieve no-kill across the entire country. They believe that animals are our best friends and that every pet has its own story, each one worth saving and each life is important. They have rescue groups and lifesaving shelters across the U.S. ',
+                    'Mental Health America is a community-based non-profit that addresses mental illness and promotes overall mental health for all with recovery as the goal. This organization provides education, research, advocacy, and service for mental health. ',];
 
 //links to each charities page
 var links = ['charities/index.html','charities/index.html',

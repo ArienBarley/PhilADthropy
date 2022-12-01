@@ -26,6 +26,13 @@
     display:inline-block;
 }
 
+#icon {
+  background-color: none;
+  padding: 10px;
+  text-align: right;
+}
+
+
 .video-frame{
     position: relative;
     text-align: center;
