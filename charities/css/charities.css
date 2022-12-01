@@ -64,3 +64,172 @@
     top: 25%;
     width: 10%;
 }
+
+#test {
+  position: relative;
+  font-size: 12px;
+  padding: 10px 30px;
+  border: 2px solid #767676;
+  letter-spacing: 1px;
+  background-color: transparent;
+  color: black;
+  overflow: hidden;
+  font-family: Courier, monospace;
+  border-radius: 8px;
+  background-color: #e8e4e4;
+}
+
+#ad-an-add:hover {
+box-shadow: 0 5px 15px rgba(253, 219, 109, .8);
+border: 2px solid #fddb6d;
+}
+
+/* Button Style */
+#ad-an-add {
+  position: relative;
+  font-size: 12px;
+  padding: 10px 30px;
+  border: 2px solid #767676;
+  letter-spacing: 1px;
+  background-color: transparent;
+  color: black;
+  overflow: hidden;
+  font-family: Courier, monospace;
+  border-radius: 8px;
+  width: 8%
+}
+
+#ad-an-add:focus {
+  outline: none;
+}
+
+#ad-an-add::before,
+#ad-an-add::after {
+  position: absolute;
+  content: '';
+  width: 25%;
+  height: 100%;
+  z-index: -1;
+  transition: transform 0.3s;
+}
+
+/* Red */
+#ad-an-add::before {
+  top: 0;
+  left: 0;
+  background-color: #f27d67;
+  transform: translateY(-100%);
+}
+
+/* Orange */
+#ad-an-add::after {
+  top: 0;
+  left: 25%;
+  background: #fddb6d;
+  transform: translateY(100%);
+}
+
+/* Dummy shape to make use of
+before and after pseudo element
+and add background color*/
+.shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #e8e4e4;
+  z-index: -2;
+}
+
+.shape::before,
+.shape::after {
+  position: absolute;
+  content: '';
+  width: 25%;
+  height: 100%;
+  transition: transform 0.3s;
+}
+
+/* Green */
+.shape::before {
+  top: 0;
+  left: 50%;
+  background-color: #8fc53d;
+  transform: translateY(-100%);
+}
+
+/* Purple */
+.shape::after {
+  top: 0;
+  left: 75%;
+  background-color: #60c6ca;
+  transform: translateY(100%);
+}
+
+/* Hover Effect */
+#ad-an-add:hover::before,
+#ad-an-add:hover::after,
+#ad-an-add:hover .shape::before,
+#ad-an-add:hover .shape::after {
+  transform: translateY(0%);
+}
+
+/* Button Style */
+#next-ad {
+  position: relative;
+  font-size: 12px;
+  padding: 10px 30px;
+  border: 2px solid #767676;
+  letter-spacing: 1px;
+  background-color: transparent;
+  color: black;
+  overflow: hidden;
+  font-family: Courier, monospace;
+  border-radius: 8px;
+  width: 8%
+}
+
+#next-ad:focus {
+  outline: none;
+}
+
+#next-ad::before,
+#next-ad::after {
+  position: absolute;
+  content: '';
+  width: 25%;
+  height: 100%;
+  z-index: -1;
+  transition: transform 0.3s;
+}
+
+/* Red */
+#next-ad::before {
+  top: 0;
+  left: 0;
+  background-color: #f27d67;
+  transform: translateY(-100%);
+}
+
+/* Orange */
+#next-ad:after {
+  top: 0;
+  left: 25%;
+  background: #fddb6d;
+  transform: translateY(100%);
+}
+
+
+/* Hover Effect */
+#next-ad:hover::before,
+#next-ad:hover::after,
+#next-ad:hover .shape::before,
+#next-ad:hover .shape::after {
+  transform: translateY(0%);
+}
+
+#next-ad:hover {
+box-shadow: 0 5px 15px rgba(143, 197, 61, .8);
+border: 2px solid #a4eb83;
+}
