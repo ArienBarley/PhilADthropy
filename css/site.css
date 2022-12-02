@@ -39,13 +39,15 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: left;
+  /*position: absolute*/
   /*align-items: stretch;*/
 }
 
 #left_buttons {
   display: flex;
   flex-direction: row;
-  justify-content: right;
+  justify-content: right;*/
+  left: 20;
   /*align-items: stretch;*/
 }
 
@@ -84,6 +86,7 @@ body {
   top: 50%; right: 50%;
   transform: translate(50%,-70%);
   padding: 5px;
+  overflow:scroll
 }
 
 th, td {
@@ -118,8 +121,6 @@ th, td {
   width:250px;
   height: 150px;
 }
-
-
 
 /*to be moved to charities .css*/
 #progress-bar img{

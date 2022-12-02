@@ -1,15 +1,15 @@
-
+/*
 #right_buttons{
   display: flex;
 	flex-direction: row;
 	justify-content: left;
-  /*align-items: stretch;*/
+  /*align-items: stretch;
 }
 #left_buttons{
   display: flex;
 	flex-direction: row;
 	justify-content: right;
-  /*align-items: stretch;*/
+  /*align-items: stretch;
 }
 #center_button{
   display: flex;
