@@ -32,7 +32,7 @@ function charitySelected(charityNo){
     watchButton.prop('disabled', false);
     //update choose charity link
     watchButton.click(function(){
-        window.open(currentCharity);
+        window.open(currentCharity, "_self");
     })
     console.log(charityNo);
     console.log(charityNames)
@@ -44,12 +44,12 @@ $("#charity1_button").click(function(){
     currentCharity = links[0];
 });
 $("#charity2_button").click(function(){
-    charitySelected(1);
+    charitySelected(2);
     //window.open(links[1])
     currentCharity = links[1];
 });
 $("#charity3_button").click(function(){
-    charitySelected(2);
+    charitySelected(1);
     //window.open(links[2])
     currentCharity = links[2];
 });
