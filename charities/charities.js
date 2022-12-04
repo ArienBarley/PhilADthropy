@@ -12,34 +12,31 @@ let sessionWatches = 0;
 const numberOfProgressBarFrames = 5;
 
 
-allVidIds = { 1: ['HQxwMfqeurQ',
-                  '808ryfU18CQ',
-                  'odI7pQFyjso',
-                  'AvXBN5A5Txc',
-                   'HP6rYThJWUg',
-               ],
-           2: ['HQxwMfqeurQ',
-                '808ryfU18CQ',
-                'odI7pQFyjso',
-                'AvXBN5A5Txc',
-                'HP6rYThJWUg',],
+const allVidIds = { 1: ['HQxwMfqeurQ',
+                        '808ryfU18CQ',
+                        'odI7pQFyjso',
+                        'AvXBN5A5Txc',
+                        'HP6rYThJWUg',],
+                   2: ['HQxwMfqeurQ',
+                        '808ryfU18CQ',
+                        'odI7pQFyjso',
+                        'AvXBN5A5Txc',
+                        'HP6rYThJWUg',],
 
-            3: ['HQxwMfqeurQ',
-                 '808ryfU18CQ',
-                 'odI7pQFyjso',
-                 'AvXBN5A5Txc',
-                 'HP6rYThJWUg',],
+                    3: ['HQxwMfqeurQ',
+                         '808ryfU18CQ',
+                         'odI7pQFyjso',
+                         'AvXBN5A5Txc',
+                         'HP6rYThJWUg',],
 
-            4:  ['HQxwMfqeurQ',
-                 '808ryfU18CQ',
-                 'odI7pQFyjso',
-                 'AvXBN5A5Txc',
-                 'HP6rYThJWUg',],
-       }
+                    4:  ['HQxwMfqeurQ',
+                         '808ryfU18CQ',
+                         'odI7pQFyjso',
+                         'AvXBN5A5Txc',
+                         'HP6rYThJWUg',],
+           }
 
-const videoIDs = allVidIDs[namesToNos[$('#charity-Num').html()]];
-
-const namesToNos { "1": 2,}
+const videoIDs = allVidIDs[$('#charity-num').html().parseInt()];
 
 var players = [];
 let noVideos = 1;
