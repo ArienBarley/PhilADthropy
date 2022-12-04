@@ -61,65 +61,49 @@ function loadNextAd(){
     //$("#next-ad").html("Play 30 seconds of the videos <br> before loading the next");
 };
 function ceckVidsPlayed(){
-    allPlayed = true;
     for(var i = 0; i<players.length; i++){
         var p = players[i];
-        console.log("ptime",p.getCurrentTime())
-        console.log("pstate=",p.getPlayerState())
         p.getPlayerState()
-        if (p.getPlayerState() != 0){
-            console.log(p.getCurrentTime());
-        }else{
+        //if any video isnt eiter finised or played for 30sectons
+        if ((p.getPlayerState() != 0)){
+            if (p.getCurrentTime()<30){
+                //dont allow next ad to be loaded
+                return false;
+            }
         }
     }
-    return allplayed
+    //if loop terminates teyve all finised playing
+    return true;
 }
 //when an add has been watched an event listener triggers this function
 function incrementWatches(){
     // funciton which is triggered each time the user completes a watch
 
     //updates frame of progress bar
-    $('#progressbar').html('');
-    $('#progressbar').append(progressBarFrames[(sessionWatches>numberOfProgressBarFrames?4:sessionWatches)]);
-    //update session count on page
-    sessionWatches++;
-    $('#session-count').html(sessionWatches);
+    $('#progress-bar').html('');
+    $('#progress-bar').append(progressBarFrames[(sessionWatches>numberOfProgressBarFrames?4:sessionWatches)]);
+
     //ceck if video as played enoug to count as a view
-    ceckVidsPlayed();
-    //if yes
+    if (ceckVidsPlayed()){
+        //update session count on page
+        sessionWatches++;
+        $('#session-count').html(sessionWatches);
+
         //loads up a new add (possibly refreshes the i-frame)
-    loadNextAd();
-    //if no
-        //write someting to a div
+        loadNextAd();
+        //clear messages
+        $(".message").remove();
+
+        updateProgressBar()
+    }else{
+        $('#ad-watch-counter').append("<p class = 'message'>Play at least 30s before loading the next ad!<br> (otherwise the video does not recieve views)</p>")
+    }
 };
-//function updateProgressBar()
+
 
 //ads another video to the watching div
-function addAnAd(){
-    // keep track of the number of videos on the page
-    noVideos++;
-    console.log("noVideos=",noVideos);
-
-    // get the first video and clone it
-    newFrame = $("#frame1").clone(false);
-
-    // change the id so that we can pull them out
-    // seperately in the loadNextAd function
-    newFrame.attr('id','frame'+ noVideos);
-    $('#ad-watch-wrapper').append(newFrame);
-    //create a new player object in this iframe
-    createPlayer('frame'+ noVideos, videoIds[sessionWatches%videoIds.length]);
-    pressPlay(players[noVideos-1]);
-    //change the videoframe properties so that they all fit on screen
-
-    //TO BE DONE
-
-    //connect the new videoframe into the DOM
-    $("#ad-watch-wrapper").append(newFrame);
-};
 
 function pressPlay(player){
-    console.log("playing video");
     player.mute();
     player.playVideo();
 };
@@ -137,7 +121,6 @@ function createPlayer(frameID, vidID){
         },
     });
     players.push(player);
-    console.log(players);
 };
 //end functions
 
@@ -160,8 +143,8 @@ function loadProgressBarFrames(){
         frame = document.createElement('img');
         frame.src = '../img/progressbarframes/'+(i+1)+'.png';
         progressBarFrames.push(frame);
-
     }
+    console.log(progressBarFrames);
 }
 //gif management
 
