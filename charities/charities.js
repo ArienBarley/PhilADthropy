@@ -23,22 +23,23 @@ allVidIds = { 1: ['HQxwMfqeurQ',
                 'odI7pQFyjso',
                 'AvXBN5A5Txc',
                 'HP6rYThJWUg',],
+
             3: ['HQxwMfqeurQ',
                  '808ryfU18CQ',
                  'odI7pQFyjso',
                  'AvXBN5A5Txc',
                  'HP6rYThJWUg',],
+
             4:  ['HQxwMfqeurQ',
                  '808ryfU18CQ',
                  'odI7pQFyjso',
                  'AvXBN5A5Txc',
                  'HP6rYThJWUg',],
-
        }
 
-const videoIDs = allVidIDs[namesToNos[$('#heading').html()]];
+const videoIDs = allVidIDs[namesToNos[$('#charity-Num').html()]];
 
-const namesToNos { "Fight the New Drug": 2,}
+const namesToNos { "1": 2,}
 
 var players = [];
 let noVideos = 1;
