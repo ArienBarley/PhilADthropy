@@ -12,7 +12,7 @@ let sessionWatches = 0;
 const numberOfProgressBarFrames = 5;
 
 
-const allVidIds = { 1: ['IVkoap_1y34',
+allVidIds = { 1: ['IVkoap_1y34',
                   '6htAvhsoek0',
                   'sRwEYQKmsts',
                   'c7V695Cllgw',
@@ -35,11 +35,11 @@ const allVidIds = { 1: ['IVkoap_1y34',
                  'PDISv0bLWPs',
                  'K2IK9uOt5ks',
                  'fFN-v_aT-y8',],
-       };
+       }
 
+const videoIDs = allVidIds[parseInt($('#charity-Num').text())];
 
-//lookup videos for this charity (number from charity-num div) in allVidIds
-const videoIds = allVidIds[parseInt(($('#charity-num').text()))];
+//const namesToNos { "1": 2};
 
 var players = [];
 let noVideos = 1;
@@ -51,9 +51,14 @@ function loadNextAd(){
     console.log('lna running');
     //rather than go off the end of the list and cause an error
     for (var i = 0; i<players.length;i++){
-        console.log(players[i]);
-        players[i].loadVideoById({'videoId':videoIds[sessionWatches%videoIds.length]});
-        pressPlay(players[i]);
+        players[i].loadVideoById({'videoId':videoIDs[sessionWatches%videoIDs.length]});
+    };
+
+    //loop through the iframes
+    for (var i = 1; i<=noVideos;i++){
+        //update their URLs
+        console.log(i);
+        $('#vid'+i).attr('src',url);
     };
 
     //disable next ad button
@@ -103,6 +108,8 @@ function incrementWatches(){
 
 //ads another video to the watching div
 
+
+
 function pressPlay(player){
     player.mute();
     player.playVideo();
@@ -117,7 +124,7 @@ function createPlayer(frameID, vidID){
             'playsinline': 1,
         },
         events: {
-            'onReady': function(event){console.log('onready runs ');pressPlay(event.target)},
+            'onReady': function(event){pressPlay(event.target)},
         },
     });
     players.push(player);
@@ -130,7 +137,7 @@ function createPlayer(frameID, vidID){
 //--- setup ---
 //sets up the first video
 function onYouTubeIframeAPIReady(){
-    createPlayer('frame1',videoIds[0]);
+    createPlayer('frame1','odI7pQFyjso');
 };
 
 // load progress par frames
