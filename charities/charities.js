@@ -9,33 +9,48 @@ Authors: Arien Barley,
 //no of ads the user has watched this session
 let sessionWatches = 0;
 
-
-<<<<<<< Updated upstream
-=======
 const numberOfProgressBarFrames = 5;
 
-const videoIDs = ['HQxwMfqeurQ',
+
+allVidIds = { 1: ['HQxwMfqeurQ',
                   '808ryfU18CQ',
                   'odI7pQFyjso',
                   'AvXBN5A5Txc',
                    'HP6rYThJWUg',
-               ];
+               ],
+           2: ['HQxwMfqeurQ',
+                '808ryfU18CQ',
+                'odI7pQFyjso',
+                'AvXBN5A5Txc',
+                'HP6rYThJWUg',],
+            3: ['HQxwMfqeurQ',
+                 '808ryfU18CQ',
+                 'odI7pQFyjso',
+                 'AvXBN5A5Txc',
+                 'HP6rYThJWUg',],
+            4:  ['HQxwMfqeurQ',
+                 '808ryfU18CQ',
+                 'odI7pQFyjso',
+                 'AvXBN5A5Txc',
+                 'HP6rYThJWUg',],
+
+       }
+
+const videoIDs = allVidIDs[namesToNos[$('#heading').html()]];
+
+const namesToNos { "Fight the New Drug": 2,}
+
 var players = [];
 let noVideos = 1;
->>>>>>> Stashed changes
-//end variabe creation
 
-//functions
+var progressBarFrames = [];
 
-//ad an add function
-
-//increment watch count
 function loadNextAd(){
     //refreshes Iframe(s) with the next video from the list of video IDs
-    console.log('lna running')
+    console.log('lna running');
     //rather than go off the end of the list and cause an error
     for (var i = 0; i<players.length;i++){
-        players[i].loadVideoById({'videoId':[videoIDs[sessionWatches%videoIDs.length],});
+        players[i].loadVideoById({'videoId':videoIDs[sessionWatches%videoIDs.length]});
     };
 
     //loop through the iframes
@@ -44,6 +59,7 @@ function loadNextAd(){
         console.log(i);
         $('#vid'+i).attr('src',url);
     };
+
     //disable next ad button
     //$("#next-ad").attr('disabled',true);
     //$("#next-ad").html("Play 30 seconds of the videos <br> before loading the next");
@@ -54,13 +70,14 @@ function incrementWatches(){
     // funciton which is triggered each time the user completes a watch
 
     //updates frame of progress bar
-
-    //+1 to add count for this charity in the file
+    $('#progressbar').html('');
+    $('#progressbar').append(progressBarFrames[(sessionWatches>numberOfProgressBarFrames?4:sessionWatches)]);
     //update session count on page
     sessionWatches++;
     $('#session-count').html(sessionWatches);
 
     //loads up a new add (possibly refreshes the i-frame)
+    loadNextAd();
 };
 //function updateProgressBar()
 
@@ -75,9 +92,9 @@ function addAnAd(){
 
     // change the id so that we can pull them out
     // seperately in the loadNextAd function
-    newFrame.attr('id','frame'+ noVideos)
+    newFrame.attr('id','frame'+ noVideos);
     //create a new player object in this
-    createPlayer('frame'+ noVideos,videoIDs[sessionWatches%videoIDs.length])
+    createPlayer('frame'+ noVideos,videoIDs[sessionWatches%videoIDs.length]);
     //change the videoframe properties so that they all fit on screen
 
     //TO BE DONE
@@ -106,7 +123,7 @@ function createPlayer(frameID, vidID){
     });
     players.push(player);
     console.log(players);
-}
+};
 //end functions
 
 
@@ -114,9 +131,9 @@ function createPlayer(frameID, vidID){
 
 //--- setup ---
 //sets up the first video
-function onYouTubeIframeAPIReady() {
+function onYouTubeIframeAPIReady(){
     createPlayer('frame1','odI7pQFyjso');
-}
+};
 
 // load progress par frames
 function loadProgressBarFrames(){
@@ -127,7 +144,10 @@ function loadProgressBarFrames(){
         //create element ghost
         frame = document.createElement('img');
         frame.src = '../img/progressbarframes/'+(i+1)+'.png';
+        progressBarFrames.push(frame);
 
+    }
+}
 //gif management
 
 //run setup scripts
@@ -158,7 +178,7 @@ $("#play-all").click(pressPlay);
 
 
 
-/* dump
+/*dump
 //wait until the video has been playing for 30 seconds before allowinng the user
 //to load the next video, so that the view is actually counted
 $(".video-frame").click(function(){
@@ -273,6 +293,4 @@ function getOffset(el) {
     return [x,y]
 };
 $('#play-videos').click(clickVideos);
-
-
 */
