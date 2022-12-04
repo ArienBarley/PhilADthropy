@@ -39,8 +39,6 @@ allVidIds = { 1: ['IVkoap_1y34',
 
 var videoIds = [];
 
-//const namesToNos { "1": 2};
-
 var players = [];
 let noVideos = 1;
 
@@ -85,12 +83,13 @@ function ceckVidsPlayed(){
 function incrementWatches(){
     // funciton which is triggered each time the user completes a watch
 
-    //updates frame of progress bar
-    $('#progress-bar').html('');
-    $('#progress-bar').append(progressBarFrames[(sessionWatches>numberOfProgressBarFrames?4:sessionWatches)]);
-
     //ceck if video as played enoug to count as a view
     if (ceckVidsPlayed()){
+        //updates frame of progress bar
+        $('#progress-bar').html('');
+        $('#progress-bar').append(progressBarFrames[((sessionWatches>=numberOfProgressBarFrames)?
+            5:(sessionWatches-1))]);
+
         //update session count on page
         sessionWatches++;
         $('#session-count').html(sessionWatches);
