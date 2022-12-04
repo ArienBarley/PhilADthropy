@@ -45,8 +45,7 @@ body {
 #left_buttons {
   display: flex;
   flex-direction: row;
-  justify-content: right;*/
-  left: 20;
+  justify-content: right;
   /*align-items: stretch;*/
 }
 
@@ -66,6 +65,7 @@ body {
   width: 150px;
   height: 50px;
 }
+
 
 #about_charity_div {
   position: fixed;
@@ -92,32 +92,34 @@ th, td {
 
 
 #charity1_button{
-  background-image:url("https://cdn.discordapp.com/attachments/521606218930847786/1043275904379523112/IMG_0304.png");
+  background-image:url("https://cdn.discordapp.com/attachments/1029075511974047765/1049078145581592607/Untitled_Artwork_6.png");
   background-size: cover;
   width: 250px;
   height: 150px;
 }
 
 #charity2_button{
-  background-image:url("https://media.discordapp.net/attachments/521606218930847786/1043275904136261662/IMG_0305.png?width=886&height=498");
+  background-image:url("https://cdn.discordapp.com/attachments/1029075511974047765/1049078144969220237/Untitled_Artwork_3.png");
   background-size: cover;
   width:250px;
   height: 150px;
 }
 
 #charity3_button{
-  background-image:url("https://media.discordapp.net/attachments/521606218930847786/1043275903897182218/IMG_0306.png?width=886&height=498");
+  background-image:url("https://cdn.discordapp.com/attachments/1029075511974047765/1049078144830820392/Untitled_Artwork_4.png");
   background-size: cover;
   width:250px;
   height: 150px;
 }
 
 #charity4_button{
-  background-image:url("https://media.discordapp.net/attachments/521606218930847786/1043275903670693928/IMG_0307.png?width=886&height=498");
+  background-image:url("https://cdn.discordapp.com/attachments/1029075511974047765/1049078144902107176/Untitled_Artwork.png");
   background-size: cover;
   width:250px;
   height: 150px;
 }
+
+
 
 /*to be moved to charities .css*/
 #progress-bar img{
