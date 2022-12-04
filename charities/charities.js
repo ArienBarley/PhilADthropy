@@ -12,34 +12,34 @@ let sessionWatches = 0;
 const numberOfProgressBarFrames = 5;
 
 
-allVidIds = { 1: ['HQxwMfqeurQ',
-                  '808ryfU18CQ',
-                  'odI7pQFyjso',
-                  'AvXBN5A5Txc',
-                   'HP6rYThJWUg',
+allVidIds = { 1: ['IVkoap_1y34',
+                  '6htAvhsoek0',
+                  'sRwEYQKmsts',
+                  'c7V695Cllgw',
+                   'aayj_Oxqqzo',
                ],
-           2: ['HQxwMfqeurQ',
-                '808ryfU18CQ',
-                'odI7pQFyjso',
-                'AvXBN5A5Txc',
-                'HP6rYThJWUg',],
+           2: ['Hx-p9Wr6xg0',
+                'Bk23mL15qpA',
+                'zFUb5l7aO2w',
+                'pikvDbl31sU',
+                'zy2kR1zFwjQ',],
 
-            3: ['HQxwMfqeurQ',
-                 '808ryfU18CQ',
-                 'odI7pQFyjso',
-                 'AvXBN5A5Txc',
-                 'HP6rYThJWUg',],
+            3: ['gplXgq4vI2M',
+                 'KG3O6UBLGbA',
+                 '5J4KTfYs5xs',
+                 'iQABUiA5fzU',
+                 '6goNpMIsiyU',],
 
-            4:  ['HQxwMfqeurQ',
-                 '808ryfU18CQ',
-                 'odI7pQFyjso',
-                 'AvXBN5A5Txc',
-                 'HP6rYThJWUg',],
+            4:  ['6Qpl-3eR6eE',
+                 'a8i7suRwjyA',
+                 'PDISv0bLWPs',
+                 'K2IK9uOt5ks',
+                 'fFN-v_aT-y8',],
        }
 
-const videoIDs = allVidIDs[namesToNos[$('#charity-Num').html()]];
+const videoIDs = allVidIds[parseInt($('#charity-Num').text())];
 
-const namesToNos { "1": 2,}
+//const namesToNos { "1": 2};
 
 var players = [];
 let noVideos = 1;
