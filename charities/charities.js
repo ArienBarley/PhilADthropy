@@ -37,7 +37,7 @@ allVidIds = { 1: ['IVkoap_1y34',
                  'fFN-v_aT-y8',],
        }
 
-const videoIDs = allVidIds[parseInt($('#charity-Num').text())];
+var videoIds = [];
 
 //const namesToNos { "1": 2};
 
@@ -51,7 +51,7 @@ function loadNextAd(){
     console.log('lna running');
     //rather than go off the end of the list and cause an error
     for (var i = 0; i<players.length;i++){
-        players[i].loadVideoById({'videoId':videoIDs[sessionWatches%videoIDs.length]});
+        players[i].loadVideoById({'videoId':videoIds[sessionWatches%videoIds.length]});
     };
 
     //loop through the iframes
@@ -66,9 +66,10 @@ function loadNextAd(){
     //$("#next-ad").html("Play 30 seconds of the videos <br> before loading the next");
 };
 function ceckVidsPlayed(){
+    return true;
     for(var i = 0; i<players.length; i++){
         var p = players[i];
-        p.getPlayerState()
+        p.getPlayerState();
         //if any video isnt eiter finised or played for 30sectons
         if ((p.getPlayerState() != 0)){
             if (p.getCurrentTime()<30){
@@ -98,8 +99,6 @@ function incrementWatches(){
         loadNextAd();
         //clear messages
         $(".message").remove();
-
-        updateProgressBar()
     }else{
         $('#ad-watch-counter').append("<p class = 'message'>Play at least 30s before loading the next ad!<br> (otherwise the video does not recieve views)</p>")
     }
@@ -137,7 +136,8 @@ function createPlayer(frameID, vidID){
 //--- setup ---
 //sets up the first video
 function onYouTubeIframeAPIReady(){
-    createPlayer('frame1','odI7pQFyjso');
+    console.log(videoIds)
+    createPlayer('frame1',videoIds[0]);
 };
 
 // load progress par frames
@@ -161,6 +161,9 @@ window.onload = (event) => {
     //loadNextAd();
     //load all the animation frames for the progress bar.
     loadProgressBarFrames();
+    console.log()
+    videoIds  = allVidIds[parseInt($('#charity-num').text())];
+    console.log("in onload",videoIds)
     //load youtube API
     var tag = document.createElement('script');
 
