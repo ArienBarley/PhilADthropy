@@ -35,7 +35,7 @@ const allVidIds = { 1: ['IVkoap_1y34',
                  'PDISv0bLWPs',
                  'K2IK9uOt5ks',
                  'fFN-v_aT-y8',],
-       }
+       };
 
 
 //lookup videos for this charity (number from charity-num div) in allVidIds
@@ -60,7 +60,20 @@ function loadNextAd(){
     //$("#next-ad").attr('disabled',true);
     //$("#next-ad").html("Play 30 seconds of the videos <br> before loading the next");
 };
-
+function ceckVidsPlayed(){
+    allPlayed = true;
+    for(var i = 0; i<players.length; i++){
+        var p = players[i];
+        console.log("ptime",p.getCurrentTime())
+        console.log("pstate=",p.getPlayerState())
+        p.getPlayerState()
+        if (p.getPlayerState() != 0){
+            console.log(p.getCurrentTime());
+        }else{
+        }
+    }
+    return allplayed
+}
 //when an add has been watched an event listener triggers this function
 function incrementWatches(){
     // funciton which is triggered each time the user completes a watch
@@ -71,9 +84,13 @@ function incrementWatches(){
     //update session count on page
     sessionWatches++;
     $('#session-count').html(sessionWatches);
-
-    //loads up a new add (possibly refreshes the i-frame)
+    //ceck if video as played enoug to count as a view
+    ceckVidsPlayed();
+    //if yes
+        //loads up a new add (possibly refreshes the i-frame)
     loadNextAd();
+    //if no
+        //write someting to a div
 };
 //function updateProgressBar()
 
@@ -108,7 +125,6 @@ function pressPlay(player){
 };
 
 function createPlayer(frameID, vidID){
-    console.log('creating player:', frameID, vidID);
     player = new YT.Player(frameID, {
         height: '390',
         width: '640',

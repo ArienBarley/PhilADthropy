@@ -36,8 +36,7 @@
 .video-frame{
     position: relative;
     text-align: center;
-    padding-bottom: calc(56.25% * 0.75); /* 16:9 */
-    width: 100%;
+    width: 70%;
     height: 100%;
 }
 
