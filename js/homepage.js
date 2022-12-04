@@ -18,9 +18,9 @@ var charityInfos = ['The National Park Conservation Association mission is to pr
                     'Mental Health America is a community-based non-profit that addresses mental illness and promotes overall mental health for all with recovery as the goal. This organization provides education, research, advocacy, and service for mental health. ',];
 
 //links to each charities page
-var links = ['charities/index.html','charities/index.html',
-             'charities/index.html','charities/index.html',];
-
+var links = ['charities/index.html','charities/char_index2.html',
+             'charities/char_index3.html','charities/char_index4.html',];
+var currentCharity = links[0];
 //funcitons
 function charitySelected(charityNo){
     watchButton = $('#choose_charity_button')
@@ -32,7 +32,7 @@ function charitySelected(charityNo){
     watchButton.prop('disabled', false);
     //update choose charity link
     watchButton.click(function(){
-        window.open(links[charityNo])
+        window.open(currentCharity);
     })
     console.log(charityNo);
     console.log(charityNames)
@@ -40,15 +40,23 @@ function charitySelected(charityNo){
 //button management
 $("#charity1_button").click(function(){
     charitySelected(0);
+    //window.open(links[0])
+    currentCharity = links[0];
 });
 $("#charity2_button").click(function(){
     charitySelected(1);
+    //window.open(links[1])
+    currentCharity = links[1];
 });
 $("#charity3_button").click(function(){
     charitySelected(2);
+    //window.open(links[2])
+    currentCharity = links[2];
 });
 $("#charity4_button").click(function(){
     charitySelected(3);
+    //window.open(links[3])
+    currentCharity = links[3];
 });
 
 

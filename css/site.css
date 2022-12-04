@@ -39,7 +39,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: left;
-  /*position: absolute*/
   /*align-items: stretch;*/
 }
 
@@ -68,7 +67,6 @@ body {
   height: 50px;
 }
 
-
 #about_charity_div {
   position: fixed;
   left: 50%;
@@ -86,7 +84,6 @@ body {
   top: 50%; right: 50%;
   transform: translate(50%,-70%);
   padding: 5px;
-  overflow:scroll
 }
 
 th, td {
