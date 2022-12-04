@@ -52,13 +52,6 @@ function loadNextAd(){
         players[i].loadVideoById({'videoId':videoIds[sessionWatches%videoIds.length]});
     };
 
-    //loop through the iframes
-    for (var i = 1; i<=noVideos;i++){
-        //update their URLs
-        console.log(i);
-        $('#vid'+i).attr('src',url);
-    };
-
     //disable next ad button
     //$("#next-ad").attr('disabled',true);
     //$("#next-ad").html("Play 30 seconds of the videos <br> before loading the next");
@@ -85,14 +78,15 @@ function incrementWatches(){
 
     //ceck if video as played enoug to count as a view
     if (ceckVidsPlayed()){
-        //updates frame of progress bar
-        $('#progress-bar').html('');
-        $('#progress-bar').append(progressBarFrames[((sessionWatches>=numberOfProgressBarFrames)?
-            5:(sessionWatches-1))]);
-
         //update session count on page
         sessionWatches++;
         $('#session-count').html(sessionWatches);
+        //updates frame of progress bar
+        $('#progress-bar').html('');
+        $('#progress-bar').append(progressBarFrames[(sessionWatches > progressBarFrames)?4:sessionWatches]);
+        console.log(sessionWatches);
+        console.log(progressBarFrames)
+
 
         //loads up a new add (possibly refreshes the i-frame)
         loadNextAd();
@@ -144,7 +138,7 @@ function loadProgressBarFrames(){
     // loops through frame images creating elements and saving them to
     // progressBarFrames, but not appending them sothat they are not
     // displayed yet
-    for (var i = 0; i<numberOfProgressBarFrames -1 ;i++){
+    for (var i = 0; i<numberOfProgressBarFrames ;i++){
         //create element ghost
         frame = document.createElement('img');
         frame.src = '../img/progressbarframes/'+(i+1)+'.png';

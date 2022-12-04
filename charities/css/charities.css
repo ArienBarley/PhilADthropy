@@ -53,12 +53,10 @@
 }
 
 #progress-bar img{
-    width: 10%;
     float: right;
     position: fixed;
     right: 5%;
     top: 25%;
-    width: 10%;
 }
 
 #test {
