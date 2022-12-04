@@ -41,7 +41,7 @@
     height: 100%;
 }
 
-#aligner {
+.aligner {
     text-align:center;
 }
 .video-frame iframe{
@@ -57,7 +57,6 @@
 
 #progress-bar img{
     width: 10%;
-    height: 300px;
     float: right;
     position: fixed;
     right: 5%;
