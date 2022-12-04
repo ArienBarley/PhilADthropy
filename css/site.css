@@ -94,29 +94,50 @@ th, td {
 #charity1_button{
   background-image:url("https://cdn.discordapp.com/attachments/1029075511974047765/1049078145581592607/Untitled_Artwork_6.png");
   background-size: cover;
-  width: 250px;
-  height: 150px;
+  width: 320px;
+  height: 180px;
+  border-radius: 14px;
+	border: solid #BDBDBD 0;
+	box-shadow: -4px 5px 0 rgba(0, 0, 0, 0.5)  ;
+	-webkit-box-shadow: -4px 5px 0 rgba(0, 0, 0, 0.5)  ;
+	-moz-box-shadow: -4px 5px 0 rgba(0, 0, 0, 0.5)  ;
 }
 
 #charity2_button{
   background-image:url("https://cdn.discordapp.com/attachments/1029075511974047765/1049078144969220237/Untitled_Artwork_3.png");
   background-size: cover;
-  width:250px;
-  height: 150px;
+  width: 320px;
+  height: 180px;
+  border-radius: 14px;
+  border: solid #BDBDBD 0;
+  box-shadow: -4px 5px 0 rgba(0, 0, 0, 0.5)  ;
+  -webkit-box-shadow: -4px 5px 0 rgba(0, 0, 0, 0.5)  ;
+  -moz-box-shadow: -4px 5px 0 rgba(0, 0, 0, 0.5)  ;
 }
 
 #charity3_button{
   background-image:url("https://cdn.discordapp.com/attachments/1029075511974047765/1049078144830820392/Untitled_Artwork_4.png");
   background-size: cover;
-  width:250px;
-  height: 150px;
+  width: 320px;
+  height: 180px;
+  border-radius: 14px;
+  border: solid #BDBDBD 0;
+  box-shadow: -4px 5px 0 rgba(0, 0, 0, 0.5)  ;
+  -webkit-box-shadow: -4px 5px 0 rgba(0, 0, 0, 0.5)  ;
+  -moz-box-shadow: -4px 5px 0 rgba(0, 0, 0, 0.5)  ;
 }
 
 #charity4_button{
   background-image:url("https://cdn.discordapp.com/attachments/1029075511974047765/1049078144902107176/Untitled_Artwork.png");
   background-size: cover;
-  width:250px;
-  height: 150px;
+  width: 320px;
+  height: 180px;
+  border-radius: 14px;
+  border: solid #BDBDBD 0;
+  box-shadow: -4px 5px 0 rgba(0, 0, 0, 0.5)  ;
+  -webkit-box-shadow: -4px 5px 0 rgba(0, 0, 0, 0.5)  ;
+  -moz-box-shadow: -4px 5px 0 rgba(0, 0, 0, 0.5)  ;
+
 }
 
 
