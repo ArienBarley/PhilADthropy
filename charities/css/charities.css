@@ -51,8 +51,11 @@
     border-style: none;
     text-align: center;
 }
-
+#prog-frame{
+    width: 1000px;
+}
 #progress-bar img{
+    width: 150px;
     float: right;
     position: fixed;
     right: -180px;
