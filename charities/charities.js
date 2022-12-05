@@ -52,9 +52,6 @@ function loadNextAd(){
         players[i].loadVideoById({'videoId':videoIds[sessionWatches%videoIds.length]});
     };
 
-    //disable next ad button
-    //$("#next-ad").attr('disabled',true);
-    //$("#next-ad").html("Play 30 seconds of the videos <br> before loading the next");
 };
 function ceckVidsPlayed(){
     return true;
@@ -83,9 +80,12 @@ function incrementWatches(){
         $('#session-count').html(sessionWatches);
         //updates frame of progress bar
         $('#progress-bar').html('');
-        $('#progress-bar').append(progressBarFrames[(sessionWatches > progressBarFrames)?4:sessionWatches]);
+        $('#progress-bar').append(progressBarFrames[Math.min(sessionWatches,progressBarFrames.length-1)]);
+
+        console.log("current frame", progressBarFrames[Math.min(sessionWatches,progressBarFrames.length-1)]);
+        console.log("min:",Math.min(sessionWatches,progressBarFrames.length-1));
         console.log(sessionWatches);
-        console.log(progressBarFrames)
+        console.log(progressBarFrames);
 
 
         //loads up a new add (possibly refreshes the i-frame)
