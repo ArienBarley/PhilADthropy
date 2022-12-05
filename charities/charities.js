@@ -54,7 +54,7 @@ function loadNextAd(){
 
 };
 function ceckVidsPlayed(){
-    return true;
+    //return true;
     for(var i = 0; i<players.length; i++){
         var p = players[i];
         p.getPlayerState();
